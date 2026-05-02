@@ -1015,7 +1015,10 @@ footer {
     <li><a href="#quiz-section">Quiz</a></li><li><a href="#projects">Projects</a></li>
   </ul>
   <div class="nav-right">
-    <a href="#" id="resume-dl-btn" class="btn-resume-dl" title="Download Vignesh's Resume" onclick="downloadResume(event)">⬇ Resume</a>
+    <a href="https://drive.google.com/uc?export=download&id=1T533SD_uU0BOsm96OrytUWR1rdpaRpGi" 
+   class="btn-resume-dl">
+   ⬇ Download Resume
+</a>
     <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
       Get in Touch
     </button>
@@ -1401,9 +1404,8 @@ footer {
       <span class="pulse"></span>Send me a message →
     </button>
     <div class="contact-row">
-      <a href="https://drive.google.com/file/d/1T533SD_uU0BOsm96OrytUWR1rdpaRpGi/view" 
-   class="cc" target="_blank">
-  <div class="cc-i">⬇</div>View Resume
+    <a href="https://drive.google.com/file/d/1T533SD_uU0BOsm96OrytUWR1rdpaRpGi/view">
+   ⬇ Download Resume
 </a>
       <a href="mailto:vigneshbalaji2702@gmail.com" class="cc"><div class="cc-i">✉</div>vigneshbalaji2702@gmail.com</a>
       <a href="tel:+919080819131" class="cc"><div class="cc-i">☎</div>+91 9080819131</a>
@@ -1437,11 +1439,9 @@ window.addEventListener('load', () => {
 /* ── RESUME DOWNLOAD ── */
 function downloadResume(e) {
   e.preventDefault();
-  window.open(
-    "https://drive.google.com/file/d/1T533SD_uU0BOsm96OrytUWR1rdpaRpGi/view",
-    "_blank"
-  );
-}
+  // Generate a simple text-based resume and trigger download
+  const resumeContent = `VIGNESH BALAJI A
+Business Development & Startup Growth
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 CONTACT
@@ -1813,6 +1813,7 @@ function bqShowResults() {
       <div class="qr-emoji">${emoji}</div>
       <div class="qr-title">You scored <span>${bqScore}/${bqQuestions.length}</span></div>
       <div class="qr-msg">${msg}</div>
+      <button class="qr-retry" onclick="bqIdx=0;bqScore=0;bqStreak=0;document.getElementById('bq-container').innerHTML='<div class=\\"big-quiz-card\\"><div class=\\"bq-left\\"><div class=\\"bq-q-number\\" id=\\"bq-num\\">01</div><div class=\\"bq-q-text\\" id=\\"bq-text\\"></div><div class=\\"bq-opts\\" id=\\"bq-opts\\"></div><div class=\\"bq-result\\" id=\\"bq-result\\"></div></div><div class=\\"bq-right\\" id=\\"bq-right\\"><div class=\\"bq-fact-icon\\" id=\\"bq-icon\\">🧠</div><div class=\\"bq-fact-title\\" id=\\"bq-fact-title\\">Think carefully</div><div class=\\"bq-fact-body\\" id=\\"bq-fact-body\\">Read through the portfolio to find clues.</div><div class=\\"bq-streak\\" id=\\"bq-streak\\" style=\\"display:none\\">🔥 On a streak!</div></div></div>';bqRender();">Try again →</button>
       <a href="https://www.linkedin.com/in/vignesh-balaji-a-entrepreneur/" target="_blank" class="qr-connect">Connect on LinkedIn →</a>
     </div>
   `;
