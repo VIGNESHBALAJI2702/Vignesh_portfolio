@@ -1434,122 +1434,25 @@ window.addEventListener('load', () => {
 /* ── RESUME DOWNLOAD ── */
 function downloadResume(e) {
   e.preventDefault();
-  // Generate a simple text-based resume and trigger download
-  const resumeContent = `VIGNESH BALAJI A
-Business Development & Startup Growth
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CONTACT
-Email: vigneshbalaji2702@gmail.com
-Phone: +91 9080819131
-LinkedIn: linkedin.com/in/vignesh-balaji-a-entrepreneur
-Location: Erode, Tamil Nadu
+  window.open(
+    "https://drive.google.com/file/d/1T533SD_uU0BOsm96OrytUWR1rdpaRpGi/view",
+    "_blank"
+  );
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PROFESSIONAL SUMMARY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Business Development professional with 1.8+ years of hands-on 
-experience in startup ecosystems. Evaluated 850+ startups, built 
-100+ investor relationships, and driven GTM strategies across B2B/B2C.
-Currently open to full-time and consulting opportunities.
-Last CTC: ₹4.2 Lakhs per annum | Open to negotiation.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-EXPERIENCE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Business Development Manager
-YNOS Venture Engine · IIT Madras (Remote)
-Aug 2025 – Mar 2026
-• Owned revenue and growth function for IIT Madras-backed platform
-• Ran B2B/B2C sales cycles and led product demos
-• Designed marketing campaigns and represented at industry events
-Skills: Revenue Strategy, B2B Sales, Product Demos, Lead Generation
-
-Growth Executive
-Seedicon · FWC IT Services (Full-time)
-Jul 2024 – Apr 2025
-• End-to-end go-to-market ownership
-• Built outreach sequences and ran demo calls
-• Managed SMM/SEO and organised ecosystem events
-Skills: GTM Strategy, SMM/SEO, Corporate Partnerships, Event Management
-
-Growth Intern → Full-time
-Seedicon · FWC IT Services (Internship)
-Dec 2023 – Jun 2024
-• First growth hire — learned full BD lifecycle
-• Cold outreach, stakeholder onboarding, digital marketing
-• Converted to full-time at end of internship
-
-Lead Generation Intern
-Functionup · Edtech
-Aug – Oct 2022
-• Built and qualified lead lists
-• Market data analysis and CRM hygiene
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-EDUCATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-MBA — Information Technology (Currently Pursuing)
-University of Madras (Distance Learning) | 2025–2027
-
-B.Com — Corporate & Professional General Management
-JAIN University | 2021–2024
-
-Higher Secondary (Commerce) — 86%
-BVB Erode
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CERTIFICATIONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-• HubSpot Certified Email Marketer
-• Power BI — Data Visualization (Self-directed)
-• Trading & Stock Market Investing (Self-directed since 2021)
-• Python Programming (Beginner)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-KEY SKILLS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-• Startup Evaluation & Due Diligence (850+ assessed)
-• Investor Relations & Business Development
-• GTM Strategy & Execution
-• Lead Generation & Sales (Apollo.io, manual outreach)
-• Data & Reporting (Power BI, Excel, dashboards)
-• Marketing & Content (HubSpot, SEO, SMM)
-• Product & UI Thinking (Figma, Canva)
-• Ecosystem & Partnership Building
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PROJECTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANNAI — School Management ERP
-Built prototype covering admissions, attendance, grades, timetables,
-and parent communication. Designed full user flows and UI wireframes.
-
-Published Articles (3)
-- "From Wallet to Refund: Your Tax Journey Unveiled"
-- "Corporate Control and Cultural Loss"
-- Startup funding mechanics for founders
-`;
-  const blob = new Blob([resumeContent], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'Vignesh_Balaji_A_Resume.txt';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  // Visual feedback
+  // Optional: button feedback
   const btn = document.getElementById('resume-dl-btn');
   const orig = btn.textContent;
-  btn.textContent = '✅ Downloaded!';
-  btn.style.color = '#22c55e';
-  btn.style.borderColor = '#22c55e';
-  setTimeout(() => { btn.textContent = orig; btn.style.color = ''; btn.style.borderColor = ''; }, 2000);
-}
+  btn.textContent = '🚀 Opening...';
+  btn.style.color = '#3b82f6';
+  btn.style.borderColor = '#3b82f6';
 
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.style.color = '';
+    btn.style.borderColor = '';
+  }, 2000);
+}
 /* ── CURSOR ── */
 const cur = document.getElementById('cur');
 const ring = document.getElementById('cur-ring');
