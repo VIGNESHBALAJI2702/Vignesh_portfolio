@@ -1801,7 +1801,9 @@ function bqRender() {
       const nxt = document.createElement('button');
       nxt.className = 'bq-next-btn';
       nxt.textContent = bqIdx + 1 < bqQuestions.length ? 'Next →' : 'See results →';
-      nxt.addEventListener('click', () => { bqIdx++; bqRender(); });
+      <button class="qr-retry" onclick="bqRender()">
+  Try again →
+</button>
       res.appendChild(nxt);
     });
     opts.appendChild(btn);
