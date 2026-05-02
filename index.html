@@ -661,28 +661,24 @@ footer {
   .hero-photo { display: none; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .proj-grid,.impact-row { grid-template-columns: 1fr; }
-  nav { padding: 14px 24px; }
+  nav { padding: 14px 16px; }
   .nav-links { display: none; }
-  .wrap { padding: 72px 24px; }
-  #hero { padding: 100px 24px 60px; }
-  #cta { padding: 80px 24px; }
-  footer { padding: 18px 24px; flex-direction: column; gap: 6px; text-align: center; }
+  .wrap { padding: 72px 16px; }
+  #hero { padding: 100px 16px 60px; }
+  #cta { padding: 80px 16px; }
+  footer { padding: 18px 16px; flex-direction: column; gap: 6px; text-align: center; }
 
-  /* 👇 ADD THIS PART */
+  /* ✅ FIXED NAV BUTTONS */
   .nav-right {
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .btn-resume-dl {
-    padding: 6px;
-    width: 36px;
-    height: 36px;
-    justify-content: center;
+    padding: 6px 10px;
     font-size: 0.7rem;
-  }
-
-  .btn-resume-dl span {
-    display: none;
+    white-space: nowrap;
   }
 
   .nav-cta {
