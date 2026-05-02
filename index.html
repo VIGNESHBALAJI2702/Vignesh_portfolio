@@ -1823,7 +1823,9 @@ function bqShowResults() {
       <div class="qr-emoji">${emoji}</div>
       <div class="qr-title">You scored <span>${bqScore}/${bqQuestions.length}</span></div>
       <div class="qr-msg">${msg}</div>
-      <button class="qr-retry" onclick="bqIdx=0;bqScore=0;bqStreak=0;document.getElementById('bq-container').innerHTML='<div class=\\"big-quiz-card\\"><div class=\\"bq-left\\"><div class=\\"bq-q-number\\" id=\\"bq-num\\">01</div><div class=\\"bq-q-text\\" id=\\"bq-text\\"></div><div class=\\"bq-opts\\" id=\\"bq-opts\\"></div><div class=\\"bq-result\\" id=\\"bq-result\\"></div></div><div class=\\"bq-right\\" id=\\"bq-right\\"><div class=\\"bq-fact-icon\\" id=\\"bq-icon\\">🧠</div><div class=\\"bq-fact-title\\" id=\\"bq-fact-title\\">Think carefully</div><div class=\\"bq-fact-body\\" id=\\"bq-fact-body\\">Read through the portfolio to find clues.</div><div class=\\"bq-streak\\" id=\\"bq-streak\\" style=\\"display:none\\">🔥 On a streak!</div></div></div>';bqRender();">Try again →</button>
+     <button class="qr-retry" onclick="resetQuiz()">
+  Try again →
+</button>
       <a href="https://www.linkedin.com/in/vignesh-balaji-a-entrepreneur/" target="_blank" class="qr-connect">Connect on LinkedIn →</a>
     </div>
   `;
