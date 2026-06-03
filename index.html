@@ -1040,9 +1040,31 @@ footer {
   grid-row: 2 / span 2;
   width: 100%;
   max-width: 100%;
-  aspect-ratio: auto;
+  aspect-ratio: 2 / 1;
   height: 100%;
 }
+
+@media(min-width: 1025px) {
+  /* Explicit placement of cards to guarantee perfect alignment on desktop grids */
+  .gallery-grid > :nth-child(1) { grid-row: 1; grid-column: 1; }
+  .gallery-grid > :nth-child(2) { grid-row: 1; grid-column: 2; }
+  .gallery-grid > :nth-child(3) { grid-row: 1; grid-column: 3; }
+  .gallery-grid > :nth-child(4) { grid-row: 1; grid-column: 4; }
+  .gallery-grid > :nth-child(5) { grid-row: 1; grid-column: 5; }
+
+  .gallery-grid > :nth-child(6) { grid-row: 2; grid-column: 1; }
+  .gallery-grid > :nth-child(7) { grid-row: 2; grid-column: 5; }
+
+  .gallery-grid > :nth-child(8) { grid-row: 3; grid-column: 1; }
+  .gallery-grid > :nth-child(9) { grid-row: 3; grid-column: 5; }
+
+  .gallery-grid > :nth-child(10) { grid-row: 4; grid-column: 1; }
+  .gallery-grid > :nth-child(11) { grid-row: 4; grid-column: 2; }
+  .gallery-grid > :nth-child(12) { grid-row: 4; grid-column: 3; }
+  .gallery-grid > :nth-child(13) { grid-row: 4; grid-column: 4; }
+  .gallery-grid > :nth-child(14) { grid-row: 4; grid-column: 5; }
+}
+
 .gallery-img-wrap {
   width: 100%;
   height: 100%;
@@ -1053,6 +1075,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block; /* Prevents inline vertical whitespace gap at the bottom */
   transition: transform .6s cubic-bezier(.4, 0, .2, 1);
 }
 .gallery-card:hover .gallery-img-wrap img {
@@ -1238,6 +1261,7 @@ footer {
     max-width: 500px;
     aspect-ratio: 4 / 3;
     height: auto;
+    justify-self: center;
   }
 }
 @media(max-width: 640px) {
@@ -1644,7 +1668,7 @@ footer {
     <div class="gallery-grid rv d1">
       <div class="gallery-card" data-index="0">
         <div class="gallery-img-wrap">
-          <img src="assets/WhatsApp Image 2026-06-01 at 4.10.07 PM.jpeg" alt="Ecosystem Leadership Conference" loading="lazy">
+          <img src="assets/WhatsApp Image 2026-06-01 at 4.10.07 PM.webp" alt="Ecosystem Leadership Conference" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1652,7 +1676,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="1">
         <div class="gallery-img-wrap">
-          <img src="assets/Screenshot 2026-06-02 220520.png" alt="Ecosystem Advisory Meeting" loading="lazy">
+          <img src="assets/Screenshot 2026-06-02 220520.webp" alt="Ecosystem Advisory Meeting" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1660,7 +1684,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="2">
         <div class="gallery-img-wrap">
-          <img src="assets/WhatsApp Image 2026-06-01 at 1.12.56 PM.jpeg" alt="Consulting Traction Milestone" loading="lazy">
+          <img src="assets/WhatsApp Image 2026-06-01 at 1.12.56 PM.webp" alt="Consulting Traction Milestone" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1668,7 +1692,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="3">
         <div class="gallery-img-wrap">
-          <img src="assets/WhatsApp Image 2026-06-01 at 1.12.55 PM (1).jpeg" alt="Startup Showcase Panel" loading="lazy">
+          <img src="assets/WhatsApp Image 2026-06-01 at 1.12.55 PM (1).webp" alt="Startup Showcase Panel" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1676,7 +1700,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="4">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_3620.jpg" alt="Pitch Evaluation" loading="lazy">
+          <img src="assets/IMG_3620.webp" alt="Pitch Evaluation" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1684,7 +1708,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="5">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG20251128085747.jpg" alt="IIT Madras YNOS Meetup" loading="lazy">
+          <img src="assets/IMG20251128085747.webp" alt="IIT Madras YNOS Meetup" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1692,7 +1716,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="6">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG20251117204004.jpg" alt="Deal-Flow Advisory Session" loading="lazy">
+          <img src="assets/IMG20251117204004.webp" alt="Deal-Flow Advisory Session" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1700,7 +1724,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="7">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_20251010_175850.jpg" alt="Incubator Pitch Day" loading="lazy">
+          <img src="assets/IMG_20251010_175850.webp" alt="Incubator Pitch Day" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1708,7 +1732,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="8">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_20251009_184221.jpg" alt="Startup Evaluation Round" loading="lazy">
+          <img src="assets/IMG_20251009_184221.webp" alt="Startup Evaluation Round" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1716,7 +1740,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="9">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG-20250723-WA0016.jpg" alt="Ecosystem Networking Session" loading="lazy">
+          <img src="assets/IMG-20250723-WA0016.webp" alt="Ecosystem Networking Session" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1724,7 +1748,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="10">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_20250220_134509.jpg" alt="Pitch Deck Mentorship" loading="lazy">
+          <img src="assets/IMG_20250220_134509.webp" alt="Pitch Deck Mentorship" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1732,7 +1756,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="11">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_20250220_105935.jpg" alt="Investor Relations Summit" loading="lazy">
+          <img src="assets/IMG_20250220_105935.webp" alt="Investor Relations Summit" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1740,7 +1764,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="12">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_20250124_105244.jpg" alt="Ecosystem Collaboration Forum" loading="lazy">
+          <img src="assets/IMG_20250124_105244.webp" alt="Ecosystem Collaboration Forum" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1748,7 +1772,7 @@ footer {
       </div>
       <div class="gallery-card" data-index="13">
         <div class="gallery-img-wrap">
-          <img src="assets/IMG_20240926_185859.jpg" alt="Startup Ecosystem Meeting" loading="lazy">
+          <img src="assets/IMG_20240926_185859.webp" alt="Startup Ecosystem Meeting" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -1757,7 +1781,7 @@ footer {
       <!-- FEATURED CARD (Centered Main Card) -->
       <div class="gallery-card featured-card" data-index="14">
         <div class="gallery-img-wrap">
-          <img src="assets/WhatsApp Image 2026-06-01 at 1.12.55 PM.jpeg" alt="Ecosystem Highlight" loading="lazy">
+          <img src="assets/WhatsApp Video 2026-06-03 at 12.59.42 PM.webp" alt="Ecosystem Highlight" loading="lazy">
           <div class="gallery-overlay">
             <button class="gallery-zoom-ico" aria-label="View larger image">🔍</button>
           </div>
@@ -2151,21 +2175,21 @@ window.addEventListener('scroll', () => {
 
 /* ── EVENTS GALLERY FILTERING & LIGHTBOX ── */
 const railImages = [
-  { src: "assets/WhatsApp Image 2026-06-01 at 4.10.07 PM.jpeg", title: "Ecosystem Leadership Conference", date: "Jun 1, 2026" },
-  { src: "assets/Screenshot 2026-06-02 220520.png", title: "Ecosystem Advisory Meeting", date: "Jun 2, 2026" },
-  { src: "assets/WhatsApp Image 2026-06-01 at 1.12.56 PM.jpeg", title: "Consulting Traction Milestone", date: "Jun 1, 2026" },
-  { src: "assets/WhatsApp Image 2026-06-01 at 1.12.55 PM (1).jpeg", title: "Startup Showcase Panel", date: "Jun 1, 2026" },
-  { src: "assets/IMG_3620.jpg", title: "Pitch Evaluation", date: "2026" },
-  { src: "assets/IMG20251128085747.jpg", title: "IIT Madras YNOS Meetup", date: "Nov 28, 2025" },
-  { src: "assets/IMG20251117204004.jpg", title: "Deal-Flow Advisory Session", date: "Nov 17, 2025" },
-  { src: "assets/IMG_20251010_175850.jpg", title: "Incubator Pitch Day", date: "Oct 10, 2025" },
-  { src: "assets/IMG_20251009_184221.jpg", title: "Startup Evaluation Round", date: "Oct 9, 2025" },
-  { src: "assets/IMG-20250723-WA0016.jpg", title: "Ecosystem Networking Session", date: "Jul 23, 2025" },
-  { src: "assets/IMG_20250220_134509.jpg", title: "Pitch Deck Mentorship", date: "Feb 20, 2025" },
-  { src: "assets/IMG_20250220_105935.jpg", title: "Investor Relations Summit", date: "Feb 20, 2025" },
-  { src: "assets/IMG_20250124_105244.jpg", title: "Ecosystem Collaboration Forum", date: "Jan 24, 2025" },
-  { src: "assets/IMG_20240926_185859.jpg", title: "Startup Ecosystem Meeting", date: "Sep 26, 2024" },
-  { src: "assets/WhatsApp Image 2026-06-01 at 1.12.55 PM.jpeg", title: "Ecosystem Highlight", date: "Jun 1, 2026" }
+  { src: "assets/WhatsApp Image 2026-06-01 at 4.10.07 PM.webp", title: "Ecosystem Leadership Conference", date: "Jun 1, 2026" },
+  { src: "assets/Screenshot 2026-06-02 220520.webp", title: "Ecosystem Advisory Meeting", date: "Jun 2, 2026" },
+  { src: "assets/WhatsApp Image 2026-06-01 at 1.12.56 PM.webp", title: "Consulting Traction Milestone", date: "Jun 1, 2026" },
+  { src: "assets/WhatsApp Image 2026-06-01 at 1.12.55 PM (1).webp", title: "Startup Showcase Panel", date: "Jun 1, 2026" },
+  { src: "assets/IMG_3620.webp", title: "Pitch Evaluation", date: "2026" },
+  { src: "assets/IMG20251128085747.webp", title: "IIT Madras YNOS Meetup", date: "Nov 28, 2025" },
+  { src: "assets/IMG20251117204004.webp", title: "Deal-Flow Advisory Session", date: "Nov 17, 2025" },
+  { src: "assets/IMG_20251010_175850.webp", title: "Incubator Pitch Day", date: "Oct 10, 2025" },
+  { src: "assets/IMG_20251009_184221.webp", title: "Startup Evaluation Round", date: "Oct 9, 2025" },
+  { src: "assets/IMG-20250723-WA0016.webp", title: "Ecosystem Networking Session", date: "Jul 23, 2025" },
+  { src: "assets/IMG_20250220_134509.webp", title: "Pitch Deck Mentorship", date: "Feb 20, 2025" },
+  { src: "assets/IMG_20250220_105935.webp", title: "Investor Relations Summit", date: "Feb 20, 2025" },
+  { src: "assets/IMG_20250124_105244.webp", title: "Ecosystem Collaboration Forum", date: "Jan 24, 2025" },
+  { src: "assets/IMG_20240926_185859.webp", title: "Startup Ecosystem Meeting", date: "Sep 26, 2024" },
+  { src: "assets/WhatsApp Video 2026-06-03 at 12.59.42 PM.webp", title: "Ecosystem Highlight", date: "Jun 3, 2026" }
 ];
 
 const lightbox = document.getElementById('lightbox');
